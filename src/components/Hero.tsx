@@ -44,7 +44,7 @@ const Hero = () => {
           ref={parallaxRef}
           className="parallax-bg"
           style={{ 
-            backgroundImage: 'linear-gradient(135deg, rgba(60, 21, 24, 0.75), rgba(41, 41, 41, 0.65)), url("/lovable-uploads/ddcdc3b5-96b7-4bcc-b8e9-0c45dd6f0b2d.png")',
+            backgroundImage: 'linear-gradient(135deg, rgba(60, 21, 24, 0.75), rgba(41, 41, 41, 0.65)), url("/assets/images/hero-bg.jpg")',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             filter: 'blur(3px)',
@@ -89,7 +89,7 @@ const Hero = () => {
           <div className="relative scroll-trigger" style={{ transitionDelay: '0.4s' }}>
             <div className="relative z-10 bg-white/20 backdrop-blur-lg p-1 rounded-2xl shadow-2xl animate-float">
               <img 
-                src="https://images.unsplash.com/photo-1602000133732-bb2d4e7ecd95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" 
+                src="/assets/images/product-showcase.jpg" 
                 alt="Silicone adhesive lingerie product" 
                 className="w-full h-auto rounded-2xl object-cover aspect-[4/5]"
               />

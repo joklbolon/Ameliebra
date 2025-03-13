@@ -28,8 +28,11 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-display font-bold tracking-tight text-sienna">
-          LuxAdhesives
+        <Link to="/" className="flex items-center gap-2">
+          <img src="/assets/images/logo.png" alt="AmelieBra Logo" className="h-8 md:h-10" />
+          <span className="text-2xl font-display font-bold tracking-tight text-sienna">
+            AmelieBra
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

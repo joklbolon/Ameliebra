@@ -15,28 +15,28 @@ const Products = () => {
       id: 1,
       name: "Invisible Adhesive Bra",
       description: "Ultra-light silicone adhesive bra with advanced skin-friendly formula.",
-      image: "/images/product-1.jpg",
+      image: "/assets/images/products/product-1.jpg",
       tag: "Bestseller"
     },
     {
       id: 2,
       name: "Lift & Shape Silicone Pads",
       description: "Contoured silicone pads designed for natural enhancement and support.",
-      image: "/images/product-2.jpg",
+      image: "/assets/images/products/product-2.jpg",
       tag: "Premium"
     },
     {
       id: 3,
       name: "Seamless Adhesive Nipple Covers",
       description: "Ultra-thin, reusable silicone covers with invisible edges.",
-      image: "/images/product-3.jpg",
+      image: "/assets/images/products/product-3.jpg",
       tag: "New"
     },
     {
       id: 4,
       name: "Body Contour Adhesive Tape",
       description: "Medical-grade adhesive tape for versatile styling solutions.",
-      image: "/images/product-4.jpg",
+      image: "/assets/images/products/product-4.jpg",
       tag: "Flexible"
     }
   ];
@@ -71,7 +71,7 @@ const Products = () => {
             Premium Collection
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Innovative <span className="text-gradient">Adhesive Solutions</span>
+            Innovative <span className="text-gradient font-extrabold">Adhesive Solutions</span>
           </h2>
           <p className="text-charcoal/80 text-lg">
             Discover our premium line of silicone and adhesive lingerie products designed for comfort, durability, and confidence.

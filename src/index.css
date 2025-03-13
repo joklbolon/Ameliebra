@@ -94,7 +94,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-white/30 shadow-lg;
+    @apply bg-white/80 backdrop-blur-md border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300;
   }
   
   .hover-card {
@@ -106,11 +106,11 @@
   }
 
   .btn-primary {
-    @apply py-3 px-6 bg-sienna text-white rounded-md hover:opacity-90 transition-all duration-300 shadow-md;
+    @apply py-3 px-6 bg-sienna text-white rounded-md hover:opacity-90 transition-all duration-300 shadow-md font-medium;
   }
 
   .btn-secondary {
-    @apply py-3 px-6 bg-transparent border border-sienna text-sienna rounded-md hover:bg-sienna/10 transition-all duration-300;
+    @apply py-3 px-6 bg-transparent border border-sienna text-sienna rounded-md hover:bg-sienna/10 transition-all duration-300 font-medium;
   }
 
   .section-padding {
