@@ -1,7 +1,9 @@
 
 import React, { useEffect } from 'react';
+import ProductCard from './ProductCard';
 
-interface Product {
+// Product type definition
+export interface Product {
   id: number;
   name: string;
   description: string;
@@ -9,38 +11,10 @@ interface Product {
   tag: string;
 }
 
-const Products = () => {
-  const products: Product[] = [
-    {
-      id: 1,
-      name: "Invisible Adhesive Bra",
-      description: "Ultra-light silicone adhesive bra with advanced skin-friendly formula.",
-      image: "/assets/images/products/product-1.jpg",
-      tag: "Bestseller"
-    },
-    {
-      id: 2,
-      name: "Lift & Shape Silicone Pads",
-      description: "Contoured silicone pads designed for natural enhancement and support.",
-      image: "/assets/images/products/product-2.jpg",
-      tag: "Premium"
-    },
-    {
-      id: 3,
-      name: "Seamless Adhesive Nipple Covers",
-      description: "Ultra-thin, reusable silicone covers with invisible edges.",
-      image: "/assets/images/products/product-3.jpg",
-      tag: "New"
-    },
-    {
-      id: 4,
-      name: "Body Contour Adhesive Tape",
-      description: "Medical-grade adhesive tape for versatile styling solutions.",
-      image: "/assets/images/products/product-4.jpg",
-      tag: "Flexible"
-    }
-  ];
+// Import all product data from a separate file to make it easier to manage
+import { productData } from '@/data/products';
 
+const Products = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, index) => {
@@ -79,27 +53,15 @@ const Products = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product) => (
-            <div 
-              key={product.id} 
-              className="product-card bg-white rounded-xl overflow-hidden shadow-lg hover-card scroll-trigger"
-            >
-              <div className="relative">
-                <img 
-                  src={product.image} 
-                  alt={product.name} 
-                  className="w-full h-64 object-cover transition-transform duration-700 hover:scale-105"
-                />
-                <div className="absolute top-4 right-4 py-1 px-3 bg-sienna text-white text-xs font-semibold rounded-full">
-                  {product.tag}
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-charcoal mb-2">{product.name}</h3>
-                <p className="text-charcoal/70 mb-4">{product.description}</p>
-                <button className="w-full btn-secondary">View Details</button>
-              </div>
-            </div>
+          {productData.map((product) => (
+            <ProductCard 
+              key={product.id}
+              id={product.id}
+              name={product.name}
+              description={product.description}
+              image={product.image}
+              tag={product.tag}
+            />
           ))}
         </div>
 
