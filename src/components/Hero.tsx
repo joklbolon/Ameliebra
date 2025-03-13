@@ -44,10 +44,15 @@ const Hero = () => {
           ref={parallaxRef}
           className="parallax-bg"
           style={{ 
-            backgroundImage: 'linear-gradient(135deg, rgba(60, 21, 24, 0.75), rgba(41, 41, 41, 0.65)), url(/lovable-uploads/ddcdc3b5-96b7-4bcc-b8e9-0c45dd6f0b2d.png)',
+            backgroundImage: 'linear-gradient(135deg, rgba(60, 21, 24, 0.75), rgba(41, 41, 41, 0.65)), url("/lovable-uploads/ddcdc3b5-96b7-4bcc-b8e9-0c45dd6f0b2d.png")',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             filter: 'blur(3px)',
+            height: '120%',
+            width: '100%',
+            position: 'absolute',
+            top: 0,
+            left: 0,
           }}
         />
         {/* Additional overlay for depth and texture */}
