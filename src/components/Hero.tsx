@@ -38,17 +38,23 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16">
-      {/* Parallax Background */}
+      {/* Parallax Background with enhanced styling */}
       <div className="parallax absolute inset-0 z-0">
         <div 
           ref={parallaxRef}
           className="parallax-bg"
           style={{ 
-            backgroundImage: 'linear-gradient(135deg, rgba(60, 21, 24, 0.8), rgba(41, 41, 41, 0.7)), url(/images/hero-bg.jpg)'
+            backgroundImage: 'linear-gradient(135deg, rgba(60, 21, 24, 0.75), rgba(41, 41, 41, 0.65)), url(/lovable-uploads/ddcdc3b5-96b7-4bcc-b8e9-0c45dd6f0b2d.png)',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            filter: 'blur(3px)',
           }}
         />
+        {/* Additional overlay for depth and texture */}
+        <div className="absolute inset-0 bg-gradient-to-r from-sienna/20 to-violet/20 mix-blend-overlay"></div>
       </div>
 
+      {/* Content */}
       <div className="container mx-auto px-6 relative z-10 pt-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-6">
@@ -84,9 +90,10 @@ const Hero = () => {
               />
             </div>
             
-            {/* Floating Decorative Elements */}
-            <div className="absolute -top-8 -right-8 w-24 h-24 bg-violet rounded-full opacity-70 blur-xl animate-pulse-slow"></div>
-            <div className="absolute -bottom-12 -left-8 w-32 h-32 bg-sienna rounded-full opacity-50 blur-xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+            {/* Enhanced floating decorative elements */}
+            <div className="absolute -top-8 -right-8 w-28 h-28 bg-violet rounded-full opacity-70 blur-xl animate-pulse-slow"></div>
+            <div className="absolute -bottom-12 -left-8 w-36 h-36 bg-sienna rounded-full opacity-50 blur-xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-violet/40 rounded-full opacity-60 blur-lg animate-pulse-slow" style={{ animationDelay: '1.5s' }}></div>
           </div>
         </div>
         
