@@ -44,7 +44,7 @@ const Hero = () => {
           ref={parallaxRef}
           className="parallax-bg"
           style={{ 
-            backgroundImage: 'linear-gradient(135deg, rgba(60, 21, 24, 0.8), rgba(41, 41, 41, 0.7)), url(https://images.unsplash.com/photo-1535295972055-1c762f4483e5?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)'
+            backgroundImage: 'linear-gradient(135deg, rgba(60, 21, 24, 0.8), rgba(41, 41, 41, 0.7)), url(/images/hero-bg.jpg)'
           }}
         />
       </div>

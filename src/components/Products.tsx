@@ -15,28 +15,28 @@ const Products = () => {
       id: 1,
       name: "Invisible Adhesive Bra",
       description: "Ultra-light silicone adhesive bra with advanced skin-friendly formula.",
-      image: "https://images.unsplash.com/photo-1617059921220-5e2e91e5818d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80",
+      image: "/images/product-1.jpg",
       tag: "Bestseller"
     },
     {
       id: 2,
       name: "Lift & Shape Silicone Pads",
       description: "Contoured silicone pads designed for natural enhancement and support.",
-      image: "https://images.unsplash.com/photo-1628626434829-51e43d1c47b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80",
+      image: "/images/product-2.jpg",
       tag: "Premium"
     },
     {
       id: 3,
       name: "Seamless Adhesive Nipple Covers",
       description: "Ultra-thin, reusable silicone covers with invisible edges.",
-      image: "https://images.unsplash.com/photo-1622466242330-efcf32546c6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80",
+      image: "/images/product-3.jpg",
       tag: "New"
     },
     {
       id: 4,
       name: "Body Contour Adhesive Tape",
       description: "Medical-grade adhesive tape for versatile styling solutions.",
-      image: "https://images.unsplash.com/photo-1586913145617-12200ab3e34d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80",
+      image: "/images/product-4.jpg",
       tag: "Flexible"
     }
   ];
