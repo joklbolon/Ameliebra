@@ -8,6 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Product } from '@/components/Products';
 import { addProduct } from '@/data/products';
+import { toast } from 'sonner';
 
 // Create a schema for form validation
 const formSchema = z.object({
@@ -17,6 +18,7 @@ const formSchema = z.object({
   tag: z.string().min(1, { message: "Tag is required." }),
 });
 
+// This type will now have all required fields, matching the Product type
 type ProductFormValues = z.infer<typeof formSchema>;
 
 interface ProductFormProps {
@@ -35,7 +37,10 @@ const ProductForm = ({ onSuccess }: ProductFormProps) => {
   });
 
   const onSubmit = (values: ProductFormValues) => {
+    // Now values is fully typed and matches what addProduct expects
     const newProduct = addProduct(values);
+    toast.success(`Product "${values.name}" added successfully`);
+    
     if (onSuccess) {
       onSuccess(newProduct);
     }
