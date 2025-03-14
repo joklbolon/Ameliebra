@@ -9,6 +9,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Product } from '@/components/Products';
 import { addProduct } from '@/data/products';
 import { toast } from 'sonner';
+import { Button } from '@/components/ui/button';
 
 // Create a schema for form validation
 const formSchema = z.object({
@@ -18,7 +19,7 @@ const formSchema = z.object({
   tag: z.string().min(1, { message: "Tag is required." }),
 });
 
-// This type will now have all required fields, matching the Product type
+// This type is correctly inferred from the schema, ensuring all fields are required
 type ProductFormValues = z.infer<typeof formSchema>;
 
 interface ProductFormProps {
@@ -37,7 +38,7 @@ const ProductForm = ({ onSuccess }: ProductFormProps) => {
   });
 
   const onSubmit = (values: ProductFormValues) => {
-    // Now values is fully typed and matches what addProduct expects
+    // The values object now has all fields guaranteed to be non-undefined
     const newProduct = addProduct(values);
     toast.success(`Product "${values.name}" added successfully`);
     
@@ -106,9 +107,9 @@ const ProductForm = ({ onSuccess }: ProductFormProps) => {
           )}
         />
 
-        <button type="submit" className="btn-primary w-full">
+        <Button type="submit" className="w-full">
           Add Product
-        </button>
+        </Button>
       </form>
     </Form>
   );
